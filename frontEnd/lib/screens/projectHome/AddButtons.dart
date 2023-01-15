@@ -8,7 +8,6 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../QRCode/readqr.dart';
 import '../projects/AddProject.dart';
-import '../QRCode/QRCodeScanner.dart';
 
 class AddButtons extends StatelessWidget {
   const AddButtons({

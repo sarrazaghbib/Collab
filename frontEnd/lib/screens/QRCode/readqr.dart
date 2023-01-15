@@ -29,16 +29,10 @@ Future<Member> addMember(
       }),
     );
     if (response.statusCode == 200) {
-      // If the server did return a 200 OK response,
-      // then parse the JSON.
-      // return User.fromJson(jsonDecode(response.body));
       return Member(
         email: "",
       );
     } else {
-      // If the server did not return a 201 CREATED response,
-      // then throw an exception.
-      print(response.body);
       return Member(
         email: "",
       );
@@ -88,7 +82,6 @@ class Member {
 class readQr extends StatelessWidget {
   const readQr({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -118,7 +111,7 @@ class _QRHomeState extends State<QRHome> {
     controller.scannedDataStream.listen((event) {
       setState(() {
         result = event;
-        // result contains the string u scanned
+        // result contains the string scanned
       });
 
       if (result != null) {

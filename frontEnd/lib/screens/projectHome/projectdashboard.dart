@@ -1,6 +1,5 @@
 import 'package:collabapp/main.dart';
 import 'package:collabapp/resources/color_manager.dart';
-import 'package:collabapp/screens/QRCode/QRCodeScanner.dart';
 import 'package:collabapp/screens/Reminders/reminders.dart';
 import 'package:collabapp/screens/Task_Test/views/home.dart';
 import 'package:collabapp/screens/draw.dart';

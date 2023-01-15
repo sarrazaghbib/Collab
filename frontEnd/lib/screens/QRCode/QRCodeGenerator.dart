@@ -27,7 +27,8 @@ class Screen extends StatefulWidget {
 }
 
 class _ScreenState extends State<Screen> {
-  String data = global.project_id; // add the project id here
+  String data = global
+      .project_id; //  here we insert the project ID in the QR image to be received by the scanner
   @override
   Widget build(BuildContext context) {
     return Scaffold(
