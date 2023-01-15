@@ -48,4 +48,6 @@ the current app has the following functionnalities:
 - Every project has a qr code that when scanned by another used adds him to the members of that project
 - chat (half functional)
 
+The backend is hosted on Render so it only works when my machine is functionning as a server. Please contact me when you want to try it .
+
 
