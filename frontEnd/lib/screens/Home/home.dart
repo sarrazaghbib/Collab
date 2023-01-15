@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:collabapp/resources/color_manager.dart';
 import 'griddashboard.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 

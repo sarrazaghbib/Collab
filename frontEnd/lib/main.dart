@@ -28,7 +28,7 @@ Future main() async {
   runApp(MaterialApp(
     scaffoldMessengerKey: Utils.messengerKey,
     debugShowCheckedModeBanner: false,
-    home: SplashLoading(),
+    home: Onboarding(),
   ));
 }
 

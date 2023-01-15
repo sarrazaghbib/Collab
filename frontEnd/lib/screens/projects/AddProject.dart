@@ -7,7 +7,6 @@ import '../projectHome/projecthome.dart';
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import './projectBox.dart';
-import 'package:intl/intl_browser.dart';
 import 'package:intl/intl.dart';
 import 'package:flutter/cupertino.dart';
 

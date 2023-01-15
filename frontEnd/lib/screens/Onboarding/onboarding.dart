@@ -1,7 +1,5 @@
 import 'package:collabapp/main.dart';
 import 'package:collabapp/resources/color_manager.dart';
-import 'package:collabapp/screens/AuthPage/AuthPAge.dart';
-import 'package:collabapp/screens/Home/home.dart';
 import 'package:flutter/material.dart';
 import 'package:collabapp/screens/Onboarding/content_model.dart';
 

@@ -1,4 +1,3 @@
-import 'package:collabapp/screens/Register/register.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:collabapp/resources/color_manager.dart';

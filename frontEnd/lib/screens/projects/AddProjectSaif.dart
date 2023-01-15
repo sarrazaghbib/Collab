@@ -6,7 +6,6 @@ import 'dart:async';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:intl/intl_browser.dart';
 import 'package:intl/intl.dart';
 import 'package:flutter/cupertino.dart';
 

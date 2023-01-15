@@ -1,4 +1,3 @@
-import 'package:collabapp/model/event.dart';
 import 'package:collabapp/resources/color_manager.dart';
 import 'package:collabapp/screens/Events/event_list.dart';
 import 'package:collabapp/screens/projects/projectsView.dart';

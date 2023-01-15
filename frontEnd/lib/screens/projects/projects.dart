@@ -151,29 +151,27 @@ Widget BuildCard(BuildContext context, int index) {
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Padding(
-                padding: const EdgeInsets.only(left: 340),
-                child: IconButton(
-                  icon: Icon(Icons.delete),
-                  iconSize: 24.0,
-                  color: Colors.white,
-                  onPressed: () {
-                    var taskId = (data[index]["id"]);
-                    DeleteProject(context, taskId);
-                  },
+              IconButton(
+                icon: Icon(Icons.delete),
+                iconSize: 24.0,
+                color: Colors.white,
+                onPressed: () {
+                  var taskId = (data[index]["id"]);
+                  DeleteProject(context, taskId);
+                },
+              ),
+              Expanded(
+                child: Center(
+                  child: Text(
+                    data[index]["title"],
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontFamily: 'Avenir',
+                        fontSize: 25,
+                        fontWeight: FontWeight.w900),
+                  ),
                 ),
               ),
-              Center(
-                child: Text(
-                  data[index]["title"],
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontFamily: 'Avenir',
-                      fontSize: 25,
-                      fontWeight: FontWeight.w900),
-                ),
-              ),
-              const SizedBox(height: 10),
               Center(
                 child: Text(
                   data[index]["members"][0],
