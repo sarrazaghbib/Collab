@@ -49,5 +49,5 @@ the current app has the following functionnalities:
 - chat (half functional)
 
 The backend is hosted on Render so it only works when my machine is functionning as a server. Please contact me when you want to try it .
-
+Video Link:
 
