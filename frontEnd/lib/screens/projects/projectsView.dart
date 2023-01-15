@@ -1,4 +1,3 @@
-import 'dart:js';
 import 'package:path/path.dart';
 import 'package:flutter/material.dart';
 import '../projects/projects.dart';

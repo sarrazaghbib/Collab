@@ -1,9 +1,7 @@
-import 'dart:html';
 import 'dart:convert';
 import 'package:collabapp/screens/projects/projectsView.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:http/http.dart' as http;
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:collabapp/resources/color_manager.dart';

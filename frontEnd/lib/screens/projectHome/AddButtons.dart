@@ -1,10 +1,5 @@
-import 'dart:html';
-import 'dart:ui';
-
-import 'package:collabapp/resources/color_manager.dart';
 import 'package:collabapp/screens/projects/AddProjectSaif.dart';
 import 'package:flutter/material.dart';
-
 import 'package:google_fonts/google_fonts.dart';
 import '../QRCode/readqr.dart';
 import '../projects/AddProject.dart';
