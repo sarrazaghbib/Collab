@@ -20,7 +20,7 @@ class AddButtons extends StatelessWidget {
                   child: Stack(
                     children: <Widget>[
                       Container(
-                        height: 100,
+                        height: 50,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(30),
                           gradient: LinearGradient(
@@ -67,7 +67,7 @@ class AddButtons extends StatelessWidget {
                     ],
                   ))),
         ),
-        const SizedBox(height: 90),
+        const SizedBox(height: 20),
         Hero(
           tag: "createproject_btn",
           child: Center(
@@ -76,7 +76,7 @@ class AddButtons extends StatelessWidget {
                   child: Stack(
                     children: <Widget>[
                       Container(
-                        height: 100,
+                        height: 50,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(30),
                           gradient: LinearGradient(

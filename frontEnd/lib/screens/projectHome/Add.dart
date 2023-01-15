@@ -35,7 +35,7 @@ class AddHome extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: const [
                       SizedBox(
-                        width: 450,
+                        width: 200,
                         child: AddButtons(),
                       ),
                     ],
