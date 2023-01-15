@@ -10,12 +10,6 @@ import '../Global.dart' as global;
 
 var data = [];
 
-var project_id = global.project_id;
-var project_title = global.title;
-var project_members = global.members;
-var project_start_date = global.start_date;
-var project_end_date = global.end_date;
-
 class projectHome extends StatefulWidget {
   const projectHome({super.key});
 
@@ -24,18 +18,13 @@ class projectHome extends StatefulWidget {
 }
 
 Future<List> getData() async {
-  project_id = global.project_id;
-  project_title = global.title;
-  project_members = global.members;
-  project_start_date = global.start_date;
-  project_end_date = global.end_date;
   final FirebaseAuth auth = FirebaseAuth.instance;
   var user = auth.currentUser;
   var url;
   url = "https://backendmobile-tje6.onrender.com/api/project";
   if (user != null) {
     try {
-      url = await url + "/" + project_id;
+      url = await url + "/" + global.project_id;
       print(url);
       final response = await http.get(Uri.parse(url));
       if (response.statusCode == 200) {
@@ -79,7 +68,7 @@ class _projectHomeState extends State<projectHome> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Text(
-                      project_title,
+                      global.title,
                       style: GoogleFonts.openSans(
                           textStyle: const TextStyle(
                               color: Color.fromARGB(255, 255, 255, 255),
@@ -90,7 +79,7 @@ class _projectHomeState extends State<projectHome> {
                       height: 4,
                     ),
                     Text(
-                      project_members[0],
+                      global.members[0],
                       style: GoogleFonts.openSans(
                           textStyle: const TextStyle(
                               color: Color.fromARGB(255, 226, 225, 228),
@@ -109,7 +98,7 @@ class _projectHomeState extends State<projectHome> {
                       child: Row(
                         children: [
                           Text(
-                            "${project_start_date} _ ",
+                            "${global.start_date} -",
                             style: GoogleFonts.openSans(
                                 textStyle: const TextStyle(
                                     color: Color.fromARGB(255, 226, 225, 228),
@@ -117,7 +106,7 @@ class _projectHomeState extends State<projectHome> {
                                     fontWeight: FontWeight.w600)),
                           ),
                           Text(
-                            project_end_date,
+                            global.end_date,
                             style: GoogleFonts.openSans(
                                 textStyle: const TextStyle(
                                     color: Color.fromARGB(255, 226, 225, 228),
