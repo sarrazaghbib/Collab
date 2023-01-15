@@ -1,4 +1,8 @@
+import 'package:collabapp/main.dart';
+import 'package:collabapp/screens/Login/login.dart';
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
 
 class ChangePass extends StatefulWidget {
   const ChangePass({Key? key}) : super(key: key);
@@ -8,9 +12,51 @@ class ChangePass extends StatefulWidget {
 
 class _ChangePass extends State<ChangePass> {
   final _passcontroller = TextEditingController();
+  late String newpass; // or string newpass ?
   final _newpasscontroller = TextEditingController();
   final _repeatpasscontroller = TextEditingController();
   final _formKey = GlobalKey<FormState>();
+  final currentUser = FirebaseAuth.instance.currentUser;
+  bool checkCurrentPass = true;
+
+  @override
+  void dispose() {
+    _newpasscontroller.dispose();
+    super.dispose();
+  }
+
+  changePassword(String oldpass) async {
+    var user = await FirebaseAuth.instance.currentUser!;
+    final cred = await EmailAuthProvider.credential(
+        email: user.email!, password: oldpass);
+    user.reauthenticateWithCredential(cred).then((value) {
+      user.updatePassword(newpass).then((_) {
+        FirebaseAuth.instance.signOut();
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(
+            builder: (context) => MyApp(),
+          ),
+        );
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            backgroundColor: Colors.green,
+            content: Text('Your password has been changed.. Login again !'),
+          ),
+        ); //Success, do something
+      }).catchError((error) {
+        //Error, show something
+      });
+    }).catchError((err) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          backgroundColor: Colors.red,
+          content: Text('Wrong Password !'),
+        ),
+      );
+    });
+  }
+
   String name = "";
   @override
   Widget build(BuildContext context) {
@@ -126,7 +172,12 @@ class _ChangePass extends State<ChangePass> {
                         ),
                         ElevatedButton(
                           onPressed: () {
-                            if (_formKey.currentState!.validate()) {}
+                            if (_formKey.currentState!.validate()) {
+                              setState(() {
+                                newpass = _newpasscontroller.text;
+                              });
+                              changePassword(_passcontroller.text);
+                            }
                           },
                           // style: ButtonStyle(elevation: MaterialStateProperty(12.0 )),
                           style: ElevatedButton.styleFrom(

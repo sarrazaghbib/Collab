@@ -91,7 +91,7 @@ class _Login extends State<Login> {
                                 child: TextField(
                                   controller: emailController,
                                   decoration: InputDecoration(
-                                      labelText: "Email or Username",
+                                      labelText: "Email",
                                       contentPadding: EdgeInsets.all(10.0),
                                       border: InputBorder.none),
                                 ),
