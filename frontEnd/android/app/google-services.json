@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "826791224015",
+    "project_id": "collabapp-1567f",
+    "storage_bucket": "collabapp-1567f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:826791224015:android:980ef2006c91e7c19c4dba",
+        "android_client_info": {
+          "package_name": "com.yasminemasmoudi.collabapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "826791224015-3aelolp4jslld78gpnf3j9l0qptt5pq3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAzgzQBVvmAnvPVyNKby1j7zZiCzRSAVA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "826791224015-3aelolp4jslld78gpnf3j9l0qptt5pq3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,3 @@
+This application is part of a school project at Sup'com. 
+The idea of this project is an application where users ...
+This project was made using : firebase and flutter

@@ -1,0 +1,6 @@
+{
+    "dart.flutterRunAdditionalArgs": [
+        "--no-sound-null-safety"
+    ],
+    "java.configuration.updateBuildConfiguration": "interactive"
+}
