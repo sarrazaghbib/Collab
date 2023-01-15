@@ -7,6 +7,7 @@ import 'package:collabapp/screens/ChangePass/ChangePass.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:collabapp/screens/calendar/calender_view.dart';
 import 'package:collabapp/screens/Logout/Logout.dart';
+import 'package:collabapp/screens/Chat/Screens/home_screen.dart';
 
 class GridDashboard extends StatelessWidget {
   Items item1 = Items(
@@ -17,7 +18,7 @@ class GridDashboard extends StatelessWidget {
   Items item2 = Items(
     title: "Chat",
     img: "assets/images/teams.png",
-    screen: ChangePass(),
+    screen: HomeScreen(),
   );
   Items item3 = Items(
     title: "Events",
