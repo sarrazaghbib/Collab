@@ -108,21 +108,23 @@ class _QRHomeState extends State<QRHome> {
   Barcode? result;
   void qr(QRViewController controller) {
     this.controller = controller;
-    controller.scannedDataStream.listen((event) {
+    controller.scannedDataStream.listen((event) async {
       setState(() {
         result = event;
         // result contains the string scanned
       });
 
       if (result != null) {
+        var k = 0;
         var id = result!.code;
         final FirebaseAuth auth = FirebaseAuth.instance;
         var user = auth.currentUser;
         var _member;
         if (user != null) {
           var User_email = user.email;
-          if (User_email != null) {
-            _member = addMember(context, User_email, id);
+          if (User_email != null && k > 1) {
+            _member = await addMember(context, User_email, id);
+            k++;
             Navigator.push(
               context,
               MaterialPageRoute(builder: (context) => projectsView()),

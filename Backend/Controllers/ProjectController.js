@@ -28,13 +28,21 @@ const AddMemberToProject = async (req, res, next) => {
                     var project = await firestore.collection('projects').doc(req.params.id);
                     const data = await project.get();
                     array=data.data().members
-                    array.push(req.body.member)
-                    var projectjson={
-                        "members":array
+                    const x =array.indexOf(req.body.member,0)
+                    console.log(x);
+                    if (x<0){
+                        array.push(req.body.member)
+                        var projectjson={
+                            "members":array
+                        }
+                        await project.update(projectjson);
+                        res.status(200).send("Member added ! ");
                     }
-                    await project.update(projectjson);
+                    else{
+                        res.status(403).send("Member Already Exist! ");
 
-                    res.status(200).send("projects added ! ");
+                    }
+
             } catch (error) {
                 res.status(400).send(error.message);
             }
